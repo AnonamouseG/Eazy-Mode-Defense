@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+
+	<ThingDef Name="BuildingBase" Abstract="True">
+		<category>Building</category>
+		<soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+		<selectable>true</selectable>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<repairEffect>Repair</repairEffect>
+		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+		<filthLeaving>BuildingRubble</filthLeaving>
+	</ThingDef>
+  
+  
+	<!--========================= Embrasures =============================-->
+	
+	
+	<ThingDef ParentName="BuildingBase">
+		<defName>StoneEmbrasure</defName>
+		<label>embrasure</label>
+		<thingClass>Building</thingClass>
+		<graphicData>
+		<texPath>Things/Building/SCSecurity/StoneEmbrasure_Atlas</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+		<shaderType>CutoutComplex</shaderType>
+		<linkType>Basic</linkType>
+		<linkFlags>
+			<li>Custom2</li>
+		</linkFlags>
+		</graphicData>
+		<category>Building</category>
+		<blueprintGraphicData>
+		<texPath>Things/Building/Linked/Sandbags_Blueprint_Atlas</texPath>
+		</blueprintGraphicData>
+		<uiIconPath>Things/Building/SCSecurity/StoneEmbrasure_MenuIcon</uiIconPath>
+		<altitudeLayer>Waist</altitudeLayer>
+		<passability>Impassable</passability>
+		<castEdgeShadows>true</castEdgeShadows>
+		<fillPercent>0.9</fillPercent>
+		<statBases>
+			<MaxHitPoints>350</MaxHitPoints>
+			<Beauty>-10</Beauty>
+			<WorkToMake>250</WorkToMake>
+			<Flammability>0</Flammability>
+		</statBases>
+		<description>A stone embrasure that provides exceptional cover from gunfire.</description>
+		<placingDraggableDimensions>1</placingDraggableDimensions>
+		<costStuffCount>10</costStuffCount>
+	    <stuffCategories>
+			<li>Stony</li>
+		</stuffCategories>
+		<filthLeaving>SandbagRubble</filthLeaving>
+		<rotatable>false</rotatable>
+		<selectable>true</selectable>
+		<neverMultiSelect>true</neverMultiSelect>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<designationCategory>Security</designationCategory>
+		<staticSunShadowHeight>0.20</staticSunShadowHeight>
+		<repairEffect>ConstructDirt</repairEffect>
+		<researchPrerequisite>Embrasures</researchPrerequisite>
+	</ThingDef>
+	
+</ThingDefs>

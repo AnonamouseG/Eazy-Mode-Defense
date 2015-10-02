@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResearchProjectDefs>
+
+	<ResearchProjectDef>
+		<defName>Embrasures</defName>
+		<label>stone embrasures</label>
+		<description>Minor Discovery:  Don't let your colonists fight out in the open!  This skill unlocks the ability to create stone embrasures that colonists can use for additional protection.</description>
+		<totalCost>600</totalCost>
+		<prerequisites>
+			<li>SecurityI</li>
+		</prerequisites>
+	</ResearchProjectDef>
+	
+	
+</ResearchProjectDefs>

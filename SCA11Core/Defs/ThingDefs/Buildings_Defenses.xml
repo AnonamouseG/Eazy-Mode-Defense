@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Buildings>
+
+  <ThingDef Name="BuildingBase" Abstract="True">
+    <category>Building</category>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <selectable>true</selectable>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+  </ThingDef>
+  
+  
+  <!--========================= Barbed Wire =============================-->
+  
+  
+  <ThingDef ParentName="BuildingBase">
+    <defName>WallWire</defName>
+    <label>Barbed Wire</label>
+    <thingClass>Building</thingClass>
+	<graphicData>
+	<texPath>Things/Buildings/BarbedWire_Atlas</texPath>
+    <graphicClass>Graphic_Single</graphicClass>
+    <linkType>CornerFiller</linkType>
+    <linkFlags>
+      <li>Sandbags</li>
+    </linkFlags>
+	</graphicData>
+    <category>Building</category>
+    <blueprintGraphicData>
+    <texPath>Things/Building/Linked/Sandbags_Blueprint_Atlas</texPath>
+	</blueprintGraphicData>
+    <uiIconPath>Things/Buildings/BarbedWire_Icon</uiIconPath>
+     <altitudeLayer>FloorEmplacement</altitudeLayer>
+    <pathCost>500</pathCost>
+    <passability>Impassable</passability>
+    <castEdgeShadows>false</castEdgeShadows>
+    <fillPercent>0.1</fillPercent>
+    <statBases>
+      <MaxHitPoints>250</MaxHitPoints>
+      <Beauty>-10</Beauty>
+      <WorkToMake>200</WorkToMake>
+      <Flammability>0</Flammability>
+    </statBases>
+	<damageMultipliers>
+		<li>
+			<damageDef>Bullet</damageDef>
+			<multiplier>0.01</multiplier>
+		</li>
+		<li>
+			<damageDef>Bomb</damageDef>
+			<multiplier>3</multiplier>
+		</li>
+	</damageMultipliers>
+    <building>
+      <isInert>true</isInert>
+    </building>
+    <description>A cheap and easy defence system that is impassable</description>
+    <placingDraggableDimensions>1</placingDraggableDimensions>
+    <costList>
+      <WoodPlank>1</WoodPlank>
+      <SteelBar>1</SteelBar>
+    </costList>
+    <rotatable>false</rotatable>
+    <selectable>true</selectable>
+    <neverMultiSelect>true</neverMultiSelect>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <designationCategory>Security</designationCategory>
+    <staticSunShadowHeight>0.5</staticSunShadowHeight>
+    <constructEffect>ConstructDirt</constructEffect>
+    <repairEffect>ConstructDirt</repairEffect>
+	<researchPrerequisite>SecurityI</researchPrerequisite>
+  </ThingDef>
+  
+  
+  
+  <!--========================= Trench  =============================-->
+  
+  
+  
+  <ThingDef ParentName="BuildingBase">
+    <defName>WallTrenches</defName>
+    <label>Trench</label>
+    <thingClass>Building</thingClass>
+	<graphicData>
+	<texPath>Things/Buildings/WallTrench_Atlas</texPath>
+    <graphicClass>Graphic_Single</graphicClass>
+    <linkType>CornerFiller</linkType>
+    <linkFlags>
+      <li>Wall</li>
+    </linkFlags>
+	</graphicData>
+    <category>Building</category>
+    <blueprintGraphicData>
+    <texPath>Things/Building/Linked/Sandbags_Blueprint_Atlas</texPath>
+    </blueprintGraphicData>
+	<uiIconPath>Things/Buildings/WallTrench_Icon</uiIconPath>
+     <altitudeLayer>FloorEmplacement</altitudeLayer>
+    <passability>Standable</passability>
+    <castEdgeShadows>false</castEdgeShadows>
+    <fillPercent>0.80</fillPercent>
+    <statBases>
+      <MaxHitPoints>1000</MaxHitPoints>
+      <Beauty>-15</Beauty>
+      <WorkToMake>800</WorkToMake>
+      <Flammability>0</Flammability>
+    </statBases>
+	<damageMultipliers>
+		<li>
+			<damageDef>Bullet</damageDef>
+			<multiplier>0.01</multiplier>
+		</li>
+		<li>
+			<damageDef>Bomb</damageDef>
+			<multiplier>1.5</multiplier>
+		</li>
+	</damageMultipliers>
+    <building>
+      <isInert>true</isInert>
+    </building>
+    <description>A trench. A highly useful defendable position</description>
+    <placingDraggableDimensions>1</placingDraggableDimensions>
+    <costList>
+      <WoodPlank>4</WoodPlank>
+    </costList>
+    <rotatable>false</rotatable>
+    <selectable>true</selectable>
+    <neverMultiSelect>true</neverMultiSelect>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <designationCategory>Security</designationCategory>
+    <staticSunShadowHeight>0.05</staticSunShadowHeight>
+    <constructEffect>ConstructDirt</constructEffect>
+    <repairEffect>ConstructDirt</repairEffect>
+	<researchPrerequisite>Mortars</researchPrerequisite>
+  </ThingDef>
+  
+
+</Buildings>

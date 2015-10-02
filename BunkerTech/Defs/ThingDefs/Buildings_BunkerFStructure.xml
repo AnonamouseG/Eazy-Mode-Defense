@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Buildings>
+
+
+  <ThingDef Name="BuildingBase" Abstract="True">
+    <category>Building</category>
+    <thingClass>Building</thingClass>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <selectable>true</selectable>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+  </ThingDef>
+
+<!--========================= Fence =============================-->
+		<ThingDef ParentName="BuildingBase">
+		<defName>BunkerFence</defName>
+		<label>Bunker Fence</label>
+		<thingClass>Building</thingClass>
+		<category>Building</category>
+		<graphicData>
+		<linkType>Basic</linkType>
+		 <texPath>Things/Building/BunkerFence</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+		<linkFlags>
+			<li>Sandbags</li>
+		</linkFlags>
+		</graphicData>
+		<uiIconPath>Things/Building/BunkerFenceIco</uiIconPath>
+		<AltitudeLayer>Waist</AltitudeLayer>
+		<PathCost>60</PathCost>
+		<statBases>
+			<MaxHitPoints>1500</MaxHitPoints>
+			<WorkToMake>100</WorkToMake>
+			<Flammability>0.0</Flammability>
+		</statBases>
+		<Passability>Impassable</Passability>
+		<fillPercent>0.9</fillPercent>
+		<Description>Bunker fence, great defenc, transmits power.</Description>
+		<placingDraggableDimensions>1</placingDraggableDimensions>
+		<costList>
+			<PlasteelBar>6</PlasteelBar>
+            <Concrete>10</Concrete>
+		</costList>
+		 <building>
+			<ignoreNeedsPower>true</ignoreNeedsPower>
+		</building>
+		<damageMultipliers>
+			<li>
+			<damageDef>Bomb</damageDef>
+			<multiplier>3</multiplier>
+			</li>
+		</damageMultipliers>
+		<comps>
+			<li>
+				<compClass>CompPowerTransmitter</compClass>
+				<transmitsPower>true</transmitsPower>
+			</li>
+		</comps>
+		<rotatable>false</rotatable>
+		<holdsRoof>false</holdsRoof>
+	   <blockLight>false</blockLight>
+		<selectable>true</selectable>
+		<neverMultiSelect>true</neverMultiSelect>
+		<DesignationCategory>Structure</DesignationCategory>
+		<researchPrerequisite>ConstructionIII</researchPrerequisite>
+	</ThingDef>
+
+</Buildings>

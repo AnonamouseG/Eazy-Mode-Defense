@@ -1,0 +1,6 @@
+Important: Install instructions:
+
+-Install Copy and paste and merge the folder provided in this patch into your mods folder. click yes to merge folder and overwire any files when prompted.
+
+
+-Done!
